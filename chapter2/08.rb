@@ -1,21 +1,17 @@
 class Parent
-  attr_reader(:name)
-
-  def initialize
-    @name = "Howard"
+  attr_reader :name
+  def initialize(name)
+    @name = name
   end
 end
 
 class Child < Parent
-  attr_reader(:grade)
-
-  def initialize
-    @grade = 8
+  def initialize(name, grade)
+    super(name)
+    @grade = grade
   end
 end
 
-adult = Parent.new
-puts adult.name
 
-youngster = Child.new
-puts youngster.name    #<- superを明示的に呼び出さないと取得できない。
+youngster = Child.new('Abigail', '8')
+puts youngster.name

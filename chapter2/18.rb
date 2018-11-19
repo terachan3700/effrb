@@ -1,7 +1,8 @@
+require('Set')
+
 class Role
   def initialize(name, permissions)
-    @name = name
-    @permissions = Hash[permissions.map { |p| [p, true] }]
+    @name, @permissions = name, Set.new(permissions)
   end
 
   def can?(permission)
@@ -10,7 +11,7 @@ class Role
 end
 
 
-role = Role.new("terada",%w(a b c))
+role = Role.new("terada", %w(a b c))
 puts role
 
 puts role.can?('e')

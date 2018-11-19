@@ -1,12 +1,13 @@
 class Tuner
   def initialize(presets)
-    @presets = clean(presets)
+    @presets = presets.dup
+    clean
   end
 
   private
 
-  def clean(presets)
-    presets.reject { |f| f[-1].to_i.even? }
+  def clean
+    @presets.reject { |f| f[-1].to_i.even? }
   end
 end
 

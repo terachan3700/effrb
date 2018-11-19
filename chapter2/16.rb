@@ -7,7 +7,7 @@ class Tuner
   private
 
   def clean
-    @presets.delete_if { |f| f[-1].to_i.even? }
+    @presets.reject { |f| f[-1].to_i.even? }
   end
 end
 

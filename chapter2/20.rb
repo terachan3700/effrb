@@ -1,6 +1,5 @@
 def frequency (array)
-  array.reduce({}) do |hash, element|
-    hash[element] ||= 0
+  array.reduce(Hash.new(0)) do |hash, element|
     hash[element] += 1
     hash
   end

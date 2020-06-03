@@ -1,0 +1,25 @@
+# ブラウザを開く
++open_browser_1:
+  action>: OpenBrowser
+  url: 'https://tutorial.co.jp'
+
+# ステートを取得
++get_state_2:
+  action>: GetState
+  key: redirect_paths
+
+# URLへ遷移
++go_to_1:
+  action>: GoTo
+  browser: +open_browser_1
+  url: 'https://tutorial.co.jp/news/2019/06/rc_agent'
+
+# ステートを取得
++get_state_1:
+  action>: GetState
+  key: redirect_paths
+
+# ステートを取得
++get_state_3:
+  action>: GetState
+  key: download_count

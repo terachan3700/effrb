@@ -1,0 +1,17 @@
+# ブラウザを開く
++open_browser_1:
+  action>: OpenBrowser
+  url: 'https://www.cman.jp/network/support/go_access.cgi'
+  headless: true
+
+# スクリーンショットを撮る
++take_screenshot_1:
+  action>: TakeScreenshot
+  browser: +open_browser_1
+  full_page: false
+  type: png
+
+# ブラウザを閉じる
++close_browser_1:
+  action>: CloseBrowser
+  browser: +open_browser_1

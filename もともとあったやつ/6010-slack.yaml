@@ -1,0 +1,11 @@
+# テキストを作成
++text_1:
+  action>: Text
+  text: "本番\n改行テスト\nHey I'm junya"
+
+# Slackでメッセージを送信する
++send_slack_message_1:
+  action>: SendSlackMessage
+  provider: slack_dc0dc2fa56506ad52790
+  channel: '#general'
+  text: +text_1

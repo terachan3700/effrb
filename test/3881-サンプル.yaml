@@ -1,0 +1,10 @@
+# ブラウザを開く
++open_browser_1:
+  action>: OpenBrowser
+  url: 'https://google.com'
+  headless: true
+
+# ブラウザを閉じる
++close_browser_1:
+  action>: CloseBrowser
+  browser: +open_browser_1
